@@ -5,7 +5,7 @@ A simple library for downloading and caching bitmaps in Android.
 
 ## Basic Usage
  
-```
+```java
 new SimpleBitmapCache(context).get("http://i.imgur.com/bqfqV8X.jpg", new BitmapReceiver() {
     @Override
     public void onReceive(Bitmap bitmap) {
