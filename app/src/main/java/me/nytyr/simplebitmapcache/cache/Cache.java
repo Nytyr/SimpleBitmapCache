@@ -21,6 +21,8 @@ public interface Cache {
 
     void put(String key, Bitmap value);
 
+    void delete(String key);
+
     Bitmap get(String key);
 
 }

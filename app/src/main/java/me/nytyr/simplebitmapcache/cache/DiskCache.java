@@ -57,6 +57,15 @@ public class DiskCache implements Cache {
     }
 
     @Override
+    public void delete(String key) {
+        File dir = context.getFilesDir();
+        File file = new File(dir, getCleanName("key"));
+        if (!file.delete()) {
+            Log.e(TAG, "Error deleting "+key);
+        }
+    }
+
+    @Override
     public Bitmap get(String key) {
         Log.i(TAG, "Read disk cache. Filename = " + key);
         try {
